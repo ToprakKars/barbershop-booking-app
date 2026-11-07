@@ -5,6 +5,11 @@ Customers pick a service, a barber and a free time slot – the app works out wh
 
 🔗 **Live demo:** https://toprakkars.github.io/barbershop-booking-app/
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ToprakKars/ToprakKars/main/assets/booking-service.jpg" width="49%" alt="Choosing a service">
+  <img src="https://raw.githubusercontent.com/ToprakKars/ToprakKars/main/assets/booking-time.jpg" width="49%" alt="Picking a free time slot">
+</p>
+
 > Fade & Co. is a fictional shop. In the demo, bookings are stored in your browser (localStorage).
 > `apps-script.gs` shows how to store them in Google Sheets instead.
 

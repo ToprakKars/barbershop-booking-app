@@ -1,0 +1,11 @@
+{
+  "name": "barbershop-booking-app",
+  "version": "1.0.0",
+  "description": "Bilingual barbershop booking app with slot availability logic",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "Toprak Arda Kars",
+  "license": "MIT"
+}

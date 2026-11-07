@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade &amp; Co. – Book an appointment</title>
+  <meta name="description" content="Demo booking app for a fictional Berlin barbershop.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-note" data-t="demo">Demo project – fictional barbershop. Bookings are only saved in your browser.</div>
+
+  <header>
+    <div class="brand">Fade <span>&amp;</span> Co.</div>
+    <div class="header-actions">
+      <button class="link" id="view-toggle" data-t="schedule">Schedule</button>
+      <div class="lang"><button data-lang="en">EN</button><button data-lang="de">DE</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="booking-view">
+      <ol class="steps" id="steps">
+        <li data-step="1" data-t="s_service">Service</li>
+        <li data-step="2" data-t="s_barber">Barber</li>
+        <li data-step="3" data-t="s_time">Time</li>
+        <li data-step="4" data-t="s_details">Details</li>
+      </ol>
+
+      <div class="panel" data-panel="1">
+        <h2 data-t="h_service">What would you like?</h2>
+        <div class="options" id="service-list"></div>
+      </div>
+
+      <div class="panel" data-panel="2" hidden>
+        <h2 data-t="h_barber">Choose your barber</h2>
+        <div class="options" id="barber-list"></div>
+      </div>
+
+      <div class="panel" data-panel="3" hidden>
+        <h2 data-t="h_time">Pick a day and time</h2>
+        <div class="days" id="day-list"></div>
+        <div class="slots" id="slot-list"></div>
+        <p class="empty" id="no-slots" hidden data-t="no_slots">No free times on this day. Try another day.</p>
+      </div>
+
+      <div class="panel" data-panel="4" hidden>
+        <h2 data-t="h_details">Your details</h2>
+        <div class="summary" id="summary"></div>
+        <form id="details-form" novalidate>
+          <label><span data-t="f_name">Name</span>
+            <input name="name" autocomplete="name" required>
+            <small class="error" data-error="name" data-t="e_name">Please enter your name.</small>
+          </label>
+          <label><span data-t="f_phone">Phone</span>
+            <input name="phone" type="tel" autocomplete="tel" required>
+            <small class="error" data-error="phone" data-t="e_phone">Please enter a valid phone number.</small>
+          </label>
+          <button class="primary" type="submit" data-t="confirm">Confirm booking</button>
+        </form>
+      </div>
+
+      <div class="panel done" data-panel="5" hidden>
+        <div class="check">✓</div>
+        <h2 data-t="h_done">You're booked!</h2>
+        <p id="done-text"></p>
+        <button class="primary" id="restart" data-t="again">Book another</button>
+      </div>
+
+      <button class="link back" id="back" hidden data-t="back">← Back</button>
+    </section>
+
+    <section id="schedule-view" hidden>
+      <h2 data-t="h_schedule">Schedule</h2>
+      <div class="days" id="schedule-days"></div>
+      <div class="schedule" id="schedule"></div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
